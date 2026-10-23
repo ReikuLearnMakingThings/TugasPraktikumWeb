@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 7 | Smart To-Do List: Antrean Servis</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --ink: #0a0a0a;
+        --muted: #525252;
+        --line: #e5e5e5;
+        --accent: #1d4ed8;
+      }
+      .dark {
+        color-scheme: dark;
+        --bg: #000000;
+        --surface: #171717;
+        --ink: #fafafa;
+        --muted: #a3a3a3;
+        --line: #2a2a2a;
+        --accent: #60a5fa;
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--ink);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              surface: "var(--surface)",
+              ink: "var(--ink)",
+              muted: "var(--muted)",
+              line: "var(--line)",
+              accent: "var(--accent)",
+            },
+          },
+        },
+      };
+
+      // Awal: ikuti pengaturan tema sistem
+      document.documentElement.classList.toggle(
+        "dark",
+        window.matchMedia("(prefers-color-scheme: dark)").matches
+      );
+    </script>
+  </head>
+
+  <body class="bg-bg text-ink antialiased">
+    <header class="border-b border-line">
+      <div
+        class="mx-auto flex max-w-[90rem] items-center justify-between px-4 py-3 sm:px-6 lg:px-10"
+      >
+        <p class="text-lg font-bold tracking-tight">Servis Kelompok 7</p>
+        <button
+          id="tombol-tema"
+          type="button"
+          class="w-28 rounded-md border border-line px-3 py-1 text-center text-sm hover:bg-surface"
+        >
+          Mode gelap
+        </button>
+      </div>
+    </header>
+
+    <main class="mx-auto max-w-xl px-4 py-12 lg:max-w-2xl">
+      <h1 class="text-3xl font-bold tracking-tight">Smart To-Do List</h1>
+      <p class="mt-2 text-muted">
+        Antrean servis: catat unit yang masuk, tandai kalau sudah selesai
+        diperbaiki.
+      </p>
+
+      <form
+        id="form-tugas"
+        class="mt-8 flex flex-col gap-3 sm:flex-row"
+        novalidate
+      >
+        <label for="input-tugas" class="sr-only">Unit servis baru</label>
+        <input
+          id="input-tugas"
+          type="text"
+          placeholder="Contoh: Asus A456 - ganti keyboard"
+          autocomplete="off"
+          class="flex-1 rounded-md border border-line bg-bg px-4 py-2 placeholder:text-muted focus:border-ink focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="rounded-md bg-ink px-5 py-2 font-semibold text-bg hover:opacity-90"
+        >
+          Tambah
+        </button>
+      </form>
+
+      <p id="pesan-error" class="mt-2 hidden text-sm text-red-600" role="alert">
+        Data unit tidak boleh kosong.
+      </p>
+
+      <ul id="todo-list" class="mt-6 space-y-2"></ul>
+
+      <p id="info-kosong" class="mt-6 text-muted">
+        Belum ada antrean. Tulis satu unit di atas, lalu tekan Tambah.
+      </p>
+
+      <p id="ringkasan" class="mt-4 hidden text-sm text-muted"></p>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

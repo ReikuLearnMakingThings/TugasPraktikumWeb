@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tugas 6 | Manipulasi Data JavaScript ES6+</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #ffffff;
+        --surface: #f5f5f5;
+        --ink: #0a0a0a;
+        --muted: #525252;
+        --line: #e5e5e5;
+        --accent: #1d4ed8;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #000000;
+          --surface: #171717;
+          --ink: #fafafa;
+          --muted: #a3a3a3;
+          --line: #2a2a2a;
+          --accent: #60a5fa;
+        }
+      }
+      body {
+        background-color: var(--bg);
+        color: var(--ink);
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              bg: "var(--bg)",
+              surface: "var(--surface)",
+              ink: "var(--ink)",
+              muted: "var(--muted)",
+              line: "var(--line)",
+              accent: "var(--accent)",
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-bg text-ink antialiased">
+    <main class="mx-auto max-w-[90rem] px-4 py-12 sm:px-6 lg:px-10">
+      <h1 class="text-3xl font-bold tracking-tight">Daftar sparepart</h1>
+      <p class="mt-2 max-w-2xl text-muted">
+        Halaman ini memuat <code class="font-mono text-ink">script.js</code>.
+        Harga promo sudah dipotong 10%, dan sparepart dengan stok 0 ditandai
+        habis.
+      </p>
+
+      <div class="mt-8 overflow-x-auto rounded-lg border border-line">
+        <table class="w-full min-w-[36rem] text-left text-sm">
+          <thead class="bg-surface text-muted">
+            <tr>
+              <th class="px-4 py-3 font-medium">Nama</th>
+              <th class="px-4 py-3 font-medium">Kategori</th>
+              <th class="px-4 py-3 text-right font-medium">Harga normal</th>
+              <th class="px-4 py-3 text-right font-medium">Harga promo</th>
+              <th class="px-4 py-3 text-right font-medium">Stok</th>
+            </tr>
+          </thead>
+          <tbody id="tabel-sparepart" class="divide-y divide-line"></tbody>
+        </table>
+      </div>
+
+      <section class="mt-10 rounded-lg border border-line p-5">
+        <h2 class="font-semibold">Cara melihat hasil di Console</h2>
+        <ol class="mt-3 list-inside list-decimal space-y-1 text-sm text-muted">
+          <li>Jalankan halaman ini dengan Live Server.</li>
+          <li>
+            Tekan <kbd class="font-mono text-ink">F12</kbd> (atau klik kanan,
+            pilih Inspect) untuk membuka Chrome DevTools.
+          </li>
+          <li>Klik tab <strong class="text-ink">Console</strong>.</li>
+          <li>
+            Kalau masih kosong, refresh halaman dengan
+            <kbd class="font-mono text-ink">Ctrl + R </kbd>.
+          </li>
+          <li>Contoh | cariProdukById(produk, 5) | filterStokTersedia(produk) | hitungDiskon(produk)</li>
+        </ol>
+        <p class="mt-4 text-sm text-muted">
+          Yang tampil di Console: data awal (tabel), sparepart yang stoknya
+          tersedia (filter), hasil pencarian berdasarkan id (find), dan harga
+          setelah diskon 10% (map). Untuk mencari id lain, ubah nilai
+          <code class="font-mono text-ink">idDicari</code> di
+          <code class="font-mono text-ink">script.js</code>, simpan, lalu lihat
+          Console lagi.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

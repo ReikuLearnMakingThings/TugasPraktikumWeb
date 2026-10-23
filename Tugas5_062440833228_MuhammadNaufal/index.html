@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servis Kelompok 7 | Toko Sparepart dan Service Laptop</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/tema.js"></script>
+  </head>
+
+  <body class="bg-bg text-ink antialiased">
+    <!-- Header & Navbar -->
+    <header class="sticky top-0 z-10 border-b border-line bg-bg">
+      <nav
+        class="mx-auto flex max-w-[90rem] flex-wrap items-center justify-between gap-x-6 gap-y-2 px-4 py-3 sm:px-6 lg:px-10"
+      >
+        <a href="#home" class="order-1 text-lg font-bold tracking-tight"
+          >Servis kelompok 7</a
+        >
+        <button
+          id="tombol-tema"
+          type="button"
+          class="order-2 w-28 rounded-md border border-line px-3 py-1 text-center text-sm hover:bg-surface md:order-3"
+        >
+          Mode gelap
+        </button>
+        <ul
+          class="order-3 flex w-full gap-x-6 text-sm text-muted md:order-2 md:w-auto md:text-base"
+        >
+          <li><a href="#home" class="hover:text-ink">Home</a></li>
+          <li><a href="#about" class="hover:text-ink">About</a></li>
+          <li><a href="#produk" class="hover:text-ink">Products</a></li>
+          <li><a href="#contact" class="hover:text-ink">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="scroll-mt-20 border-b border-line">
+        <div
+          class="mx-auto flex max-w-[90rem] flex-col gap-10 px-4 py-14 sm:px-6 md:flex-row md:items-center md:gap-14 md:py-20 lg:px-10"
+        >
+          <div class="md:w-1/2">
+            <p class="text-sm font-medium text-accent">
+              Toko sparepart dan service laptop
+            </p>
+            <h1
+              class="mt-3 text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl"
+            >
+              Sparepart laptop lengkap, servis bergaransi.
+            </h1>
+            <p class="mt-4 text-lg text-muted lg:text-xl">
+              Cari SSD, RAM, charger, dan sparepart lain dengan stok yang jelas.
+              Butuh dipasang? Teknisi kami yang kerjakan.
+            </p>
+            <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#produk"
+                class="rounded-md bg-ink px-5 py-3 text-center font-semibold text-bg hover:opacity-90"
+                >Lihat Produk</a
+              >
+              <a
+                href="#contact"
+                class="rounded-md border border-line px-5 py-3 text-center font-semibold hover:bg-surface"
+                >Booking Servis</a
+              >
+            </div>
+          </div>
+
+          <div class="md:w-1/2">
+            <svg
+              viewBox="0 0 400 280"
+              width="400"
+              height="280"
+              class="mx-auto w-full max-w-md text-ink lg:max-w-lg"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="6"
+              stroke-linejoin="round"
+              stroke-linecap="round"
+              role="img"
+              aria-label="Ilustrasi laptop"
+            >
+              <rect x="70" y="20" width="260" height="170" rx="10" />
+              <rect x="88" y="38" width="224" height="134" rx="4" stroke-width="3" />
+              <path d="M110 70 H200 M110 95 H250 M110 120 H170" stroke-width="3" />
+              <path d="M40 205 H360 L346 232 Q344 238 337 238 H63 Q56 238 54 232 Z" />
+              <path d="M170 218 H230" stroke-width="3" />
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <!-- Product Grid -->
+      <section id="produk" class="scroll-mt-20 border-b border-line">
+        <div class="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 lg:px-10">
+          <h2 class="text-2xl font-bold tracking-tight">Katalog sparepart</h2>
+          <p class="mt-2 text-muted">
+            Harga dan stok diperbarui setiap hari. Pesan lewat WhatsApp.
+          </p>
+
+          <div
+            class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:gap-8"
+          >
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-1.svg"
+              alt="SSD 256GB"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Penyimpanan</p>
+              <h3 class="mt-1 font-semibold">SSD 256GB</h3>
+              <p class="mt-2 text-lg font-bold">Rp 350.000</p>
+              <p class="text-sm text-muted">Stok: 10</p>
+              <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20SSD%20256GB"
+              class="mt-4 block rounded-md border border-line px-4 py-2 text-center text-sm font-semibold hover:bg-surface"
+              >Pesan via WhatsApp</a
+            >
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-2.svg"
+              alt="RAM DDR4 8GB"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Memori</p>
+              <h3 class="mt-1 font-semibold">RAM DDR4 8GB</h3>
+              <p class="mt-2 text-lg font-bold">Rp 280.000</p>
+              <p class="text-sm text-muted">Stok: 15</p>
+              <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20RAM%20DDR4%208GB"
+              class="mt-4 block rounded-md border border-line px-4 py-2 text-center text-sm font-semibold hover:bg-surface"
+              >Pesan via WhatsApp</a
+            >
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-3.svg"
+              alt="Baterai Laptop Universal"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Daya</p>
+              <h3 class="mt-1 font-semibold">Baterai Laptop Universal</h3>
+              <p class="mt-2 text-lg font-bold">Rp 320.000</p>
+              <p class="text-sm text-muted">Stok: 0</p>
+              <span
+              class="mt-4 block cursor-not-allowed rounded-md bg-surface px-4 py-2 text-center text-sm font-semibold text-muted"
+              >Stok habis</span
+            >
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-4.svg"
+              alt="Charger Laptop 65W"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Daya</p>
+              <h3 class="mt-1 font-semibold">Charger Laptop 65W</h3>
+              <p class="mt-2 text-lg font-bold">Rp 180.000</p>
+              <p class="text-sm text-muted">Stok: 20</p>
+              <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Charger%20Laptop%2065W"
+              class="mt-4 block rounded-md border border-line px-4 py-2 text-center text-sm font-semibold hover:bg-surface"
+              >Pesan via WhatsApp</a
+            >
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-5.svg"
+              alt="Keyboard Laptop"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Input</p>
+              <h3 class="mt-1 font-semibold">Keyboard Laptop</h3>
+              <p class="mt-2 text-lg font-bold">Rp 150.000</p>
+              <p class="text-sm text-muted">Stok: 7</p>
+              <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Keyboard%20Laptop"
+              class="mt-4 block rounded-md border border-line px-4 py-2 text-center text-sm font-semibold hover:bg-surface"
+              >Pesan via WhatsApp</a
+            >
+            </div>
+          </article>
+          <article class="overflow-hidden rounded-lg border border-line">
+            <img
+              src="img/sparepart-6.svg"
+              alt="Thermal Paste"
+              width="400"
+              height="300"
+              loading="lazy"
+              class="aspect-[4/3] w-full object-cover"
+            />
+            <div class="p-4">
+              <p class="text-xs font-medium text-accent">Pendingin</p>
+              <h3 class="mt-1 font-semibold">Thermal Paste</h3>
+              <p class="mt-2 text-lg font-bold">Rp 45.000</p>
+              <p class="text-sm text-muted">Stok: 30</p>
+              <a
+              href="https://wa.me/6281234567890?text=Halo%2C%20saya%20mau%20pesan%20Thermal%20Paste"
+              class="mt-4 block rounded-md border border-line px-4 py-2 text-center text-sm font-semibold hover:bg-surface"
+              >Pesan via WhatsApp</a
+            >
+            </div>
+          </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="scroll-mt-20 border-b border-line">
+        <div
+          class="mx-auto grid max-w-[90rem] gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10"
+        >
+          <div>
+            <h2 class="text-2xl font-bold tracking-tight">Tentang Servis Kelompok 7</h2>
+            <p class="mt-3 max-w-xl text-muted">
+              Kami usaha lokal yang menjual sparepart dan melayani service
+              laptop. Biaya dijelaskan sebelum pengerjaan, dan setiap servis
+              bergaransi.
+            </p>
+          </div>
+          <div>
+            <h3 class="font-semibold">Layanan servis (harga mulai dari)</h3>
+            <ul class="mt-3 divide-y divide-line border-y border-line text-sm">
+            <li class="flex items-baseline justify-between gap-6 py-3">
+              <span>Virus dan install ulang</span>
+              <span class="shrink-0 font-semibold">Rp 100.000</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-6 py-3">
+              <span>Laptop lemot (upgrade SSD atau RAM)</span>
+              <span class="shrink-0 font-semibold">Rp 150.000</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-6 py-3">
+              <span>Ganti layar atau keyboard</span>
+              <span class="shrink-0 font-semibold">Rp 250.000</span>
+            </li>
+            <li class="flex items-baseline justify-between gap-6 py-3">
+              <span>Overheat (bersihkan kipas dan thermal paste)</span>
+              <span class="shrink-0 font-semibold">Rp 90.000</span>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimoni -->
+      <section id="testimoni" class="scroll-mt-20 border-b border-line">
+        <div class="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 lg:px-10">
+          <h2 class="text-2xl font-bold tracking-tight">Apa Kata Mereka?</h2>
+
+          <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3 lg:gap-8">
+            <figure class="flex flex-col rounded-lg border border-line p-5">
+              <blockquote class="flex-1 text-muted">
+                &ldquo;Beli SSD dan langsung dipasang di tempat. Laptop yang tadinya lemot sekarang menyala dalam hitungan detik.&rdquo;
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface font-semibold"
+                  aria-hidden="true"
+                  >N</span
+                >
+                <span>
+                  <span class="block font-semibold">Naufal</span>
+                  <span class="block text-sm text-muted">Pelanggan</span>
+                </span>
+              </figcaption>
+            </figure>
+            <figure class="flex flex-col rounded-lg border border-line p-5">
+              <blockquote class="flex-1 text-muted">
+                &ldquo;Biayanya dijelaskan di awal, jadi tidak khawatir ada tambahan. Servis selesai sesuai waktu yang dijanjikan.&rdquo;
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface font-semibold"
+                  aria-hidden="true"
+                  >S</span
+                >
+                <span>
+                  <span class="block font-semibold">Sulis</span>
+                  <span class="block text-sm text-muted">Pelanggan</span>
+                </span>
+              </figcaption>
+            </figure>
+            <figure class="flex flex-col rounded-lg border border-line p-5">
+              <blockquote class="flex-1 text-muted">
+                &ldquo;Charger yang saya cari ada stoknya dan harganya jelas. Pesan lewat WhatsApp, besoknya sudah bisa diambil.&rdquo;
+              </blockquote>
+              <figcaption class="mt-5 flex items-center gap-3">
+                <span
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-surface font-semibold"
+                  aria-hidden="true"
+                  >C</span
+                >
+                <span>
+                  <span class="block font-semibold">Candra</span>
+                  <span class="block text-sm text-muted">Pelanggan</span>
+                </span>
+              </figcaption>
+            </figure>
+          </div>
+
+          <dl class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <div>
+              <dd class="text-4xl font-bold tracking-tight lg:text-5xl">1.250</dd>
+              <dt class="mt-1 text-muted">Jumlah Customer</dt>
+            </div>
+            <div>
+              <dd class="text-4xl font-bold tracking-tight lg:text-5xl">1.480</dd>
+              <dt class="mt-1 text-muted">Unit Solved</dt>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="scroll-mt-20">
+        <div class="mx-auto max-w-[90rem] px-4 py-14 sm:px-6 lg:px-10">
+          <h2 class="text-2xl font-bold tracking-tight">Contact</h2>
+          <p class="mt-2 max-w-xl text-muted">
+            Kirim merek laptop dan keluhannya lewat WhatsApp, kami balas di jam
+            buka.
+          </p>
+          <a
+            href="https://wa.me/6281234567890?text=Halo,%20saya%20mau%20booking%20servis%20laptop"
+            class="mt-6 inline-block rounded-md bg-ink px-5 py-3 font-semibold text-bg hover:opacity-90"
+            >Chat WhatsApp</a
+          >
+          <dl class="mt-8 grid grid-cols-1 gap-4 text-sm sm:grid-cols-3">
+            <div>
+              <dt class="text-muted">Alamat</dt>
+              <dd class="font-medium">Jl. Contoh No. 12</dd>
+            </div>
+            <div>
+              <dt class="text-muted">Jam buka</dt>
+              <dd class="font-medium">Setiap hari, 09.00 - 20.00</dd>
+            </div>
+            <div>
+              <dt class="text-muted">Email</dt>
+              <dd class="font-medium">halo@servis-kelompok-7.id</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-line">
+      <div
+        class="mx-auto flex max-w-[90rem] flex-col gap-3 px-4 py-6 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-10"
+      >
+        <p>&copy; 2026 Servis servis kelompok 7. Seluruh hak cipta dilindungi.</p>
+        <ul class="flex gap-5">
+          <li><a href="#" class="hover:text-ink">Instagram</a></li>
+          <li><a href="#" class="hover:text-ink">Facebook</a></li>
+          <li><a href="#" class="hover:text-ink">WhatsApp</a></li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>
